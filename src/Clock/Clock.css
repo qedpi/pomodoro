@@ -1,0 +1,8 @@
+#Clock {
+    border-radius: 50%;
+    background-color: darkgoldenrod;
+    text-align: center;
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+}
