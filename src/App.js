@@ -28,11 +28,13 @@ class App extends Component {
 
     startClockHandler = event => {
         // this.stepWork(true);
-        const timeLeft = (this.state.isWork? this.state.workMinutes : this.state.breakMinutes) * 60;
-        this.setState({
-            counter: timeLeft,
-        });
-        this.step();
+
+        if (!this.state.counter){
+            const timeLeft = (this.state.isWork? this.state.workMinutes : this.state.breakMinutes) * 60;
+            this.setState({
+                counter: timeLeft,
+            }, this.step);
+        }
     };
 
     step = () => {
@@ -40,6 +42,7 @@ class App extends Component {
             this.setState({
                 isWork: !this.state.isWork,
             });
+            this.playAudio();
             this.startClockHandler();
         } else {
             this.setState({

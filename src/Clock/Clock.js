@@ -8,7 +8,7 @@ const clock = props => {
     return (
         <div id="Clock">
             <button onClick={props.startClock}>Start</button>
-            <p>{mins}:{secs}</p>
+            <p id="time">{mins}:{secs}</p>
         </div>
     )
 };

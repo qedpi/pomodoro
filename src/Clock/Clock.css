@@ -6,3 +6,7 @@
     width: 10rem;
     height: 10rem;
 }
+
+#time {
+    line-height: 5rem;
+}
